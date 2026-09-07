@@ -22,7 +22,7 @@
         header {
             background-color: var(--ev-dark);
             color: #fff;
-            padding: 2rem 10%;
+            padding: 3rem 10%;
             text-align: center;
             border-bottom: 4px solid var(--ev-blue);
         }
@@ -32,7 +32,7 @@
             letter-spacing: 1px;
         }
         header p {
-            color: #aaa;
+            color: #a0aec0;
             font-size: 1.2rem;
             margin-top: 0.5rem;
         }
@@ -44,14 +44,21 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        section:last-child {
+            margin-bottom: 0;
+        }
         h2 {
             border-left: 5px solid var(--ev-blue);
             padding-left: 15px;
             color: var(--ev-dark);
             margin-top: 0;
+            font-size: 1.5rem;
         }
         .tags {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
         .tag {
             background: var(--ev-dark);
@@ -63,6 +70,15 @@
             margin-right: 8px;
             display: inline-block;
             margin-bottom: 8px;
+        }
+        .contact-links a {
+            color: var(--ev-blue);
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 1.5rem;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -76,27 +92,48 @@
 
     <header>
         <h1>Sumit Singh Sisodia</h1>
-        <p>Executive M.Tech in Hybrid and Electric Vehicle Technology</p>
+        <p>Executive M.Tech in Hybrid and Electric Vehicle Technology | IIT Indore</p>
     </header>
 
     <div class="container">
-        <h2>About Me</h2>
-        <p>I specialize in deep-dive technical analysis and simulation for the electric vehicle ecosystem. My focus is on bridging the gap between theoretical modeling and real-world hybrid and electric vehicle performance through rigorous data-driven engineering.</p>
-        
-        <h2>Technical Expertise</h2>
-        <p>From developing State of Health (SOH) and Remaining Useful Life (RUL) algorithms for advanced battery packs to simulating complex vehicle dynamics, my methodology is built on validation and control logic optimization.</p>
-        
-        <div class="tags">
-            <span class="tag">MATLAB / Simulink</span>
-            <span class="tag">Python & Pandas</span>
-            <span class="tag">BMS Algorithm Development</span>
-            <span class="tag">Vehicle Dynamics</span>
-            <span class="tag">Motor Controllers</span>
-        </div>
+        <section>
+            <h2>About Me</h2>
+            <p>Passionate engineering professional specializing in hybrid and electric vehicle technologies. Focused on bridging the gap between theoretical system modeling and real-world implementation, with a strong emphasis on data-driven engineering and control logic.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p><strong>Executive M.Tech in Hybrid and Electric Vehicle Technology</strong><br>
+            Indian Institute of Technology Indore (IIT Indore)</p>
+        </section>
+
+        <section>
+            <h2>Technical Expertise & Tools</h2>
+            <p>Experienced in utilizing advanced simulation frameworks and programming environments to analyze powertrain dynamics and energy storage behavior.</p>
+            <div class="tags">
+                <span class="tag">MATLAB</span>
+                <span class="tag">Simulink</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Battery Management Systems (BMS)</span>
+                <span class="tag">Vehicle Dynamics</span>
+                <span class="tag">Motor Controllers</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">Git</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Connect</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/sumit-singh-sisodia/" target="_blank">LinkedIn Profile</a>
+                <a href="https://github.com/sssisodia11" target="_blank">GitHub</a>
+            </div>
+        </section>
     </div>
 
     <footer>
-        &copy; 2026 Sumit Singh Sisodia. Engineered for the Electric Future.
+        &copy; 2026 Sumit Singh Sisodia. All rights reserved.
     </footer>
 
 </body>
