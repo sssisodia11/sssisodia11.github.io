@@ -3,234 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Singh Sisodia | EV Engineer</title>
-    <style>
-        :root {
-            --bg-color: #f4f4f5;
-            --card-bg: #ffffff;
-            --text-main: #18181b;
-            --text-muted: #71717a;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        /* --- Header Section --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .header-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .greeting {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            display: block;
-            margin-bottom: 0.2rem;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            margin: 0;
-            letter-spacing: -1px;
-            text-transform: uppercase;
-            line-height: 1.1;
-            color: var(--text-main);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        .profile-container {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--card-bg);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-
-        .profile-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* --- Grid / Bento Box Layout --- */
-        .story-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Make Vision span the full width to start the story */
-        .vision-card {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, var(--card-bg) 0%, var(--accent-light) 100%);
-        }
-
-        .card h2 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card p {
-            margin: 0;
-            color: #3f3f46;
-            font-size: 1.05rem;
-        }
-
-        /* --- Specific Card Styling --- */
-        .edu-highlight {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 1.5rem;
-        }
-
-        .tag {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .story-grid {
-                grid-template-columns: 1fr;
-            }
-            .profile-container {
-                width: 120px;
-                height: 120px;
-            }
-            header {
-                flex-direction: column-reverse;
-                text-align: center;
-                justify-content: center;
-            }
-        }
-    </style>
+    <title>Sumit Singh Sisodia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <p class="greeting">Hi, I'm</p>
+        <h1>SUMIT SINGH SISODIA</h1> <!--[cite: 1] -->
+        <h2 class="subtitle">Engineer • Powertrain Dynamics • Simulation Specialist</h2> <!--[cite: 1] -->
         
-        <!-- Header -->
-        <header>
-            <div class="header-text">
-                <span class="greeting">Hi, I'm</span>
-                <h1>SUMIT SINGH SISODIA</h1>
-                <div class="subtitle">Engineer • Powertrain Dynamics • Simulation Specialist</div>
-            </div>
-            
-            <div class="profile-container">
-                <!-- Replace the link below with your actual LinkedIn profile picture URL -->
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQE5YMpZBzm7vw/profile-displayphoto-scale_200_200/B4DZ0An.zSKgAY-/0/1773831985556?e=1790208000&v=beta&t=KE92gyrDwMqH8RFFBXiTR6DpPZu7MlpfCdLfqMzqiRg" alt="Sumit Singh Sisodia">
-            </div>
-        </header>
-
-        <!-- Main Narrative Grid -->
-        <div class="story-grid">
-            
-            <!-- Card 1: Vision (Spans full width) -->
-            <div class="card vision-card">
-                <h2>✦ The Vision</h2>
-                <p>Driving the transition to sustainable e-mobility by cutting through theoretical hype with hard, data-driven engineering. My focus is on optimizing the electric mobility ecosystem—from battery management logic to vehicle dynamics—ensuring next-generation powertrains perform flawlessly outside of the simulation environment.</p>
-            </div>
-
-            <!-- Card 2: Education -->
-            <div class="card">
-                <h2>✦ Education</h2>
-                <span class="edu-highlight">Executive M.Tech in Hybrid & Electric Vehicle Technology</span>
-                <p><strong>Indian Institute of Technology Indore (IIT Indore)</strong></p>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Building a robust academic and practical foundation in advanced automotive technologies and electrified powertrain architectures.</p>
-            </div>
-
-            <!-- Card 3: Ongoing Projects -->
-            <div class="card">
-                <h2>✦ Ongoing Projects</h2>
-                <p>Currently architecting <strong>State of Health (SOH)</strong> and <strong>Remaining Useful Life (RUL)</strong> algorithms for advanced battery packs.</p>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Managing the technical timeline to transition these predictive algorithms into robust cloud implementations, while continuously refining motor controller behaviors under varying load profiles.</p>
-            </div>
-
-            <!-- Card 4: Work & Expertise (Spans full width at bottom) -->
-            <div class="card vision-card">
-                <h2>✦ Work & Technical Expertise</h2>
-                <p>Translating complex dynamic behaviors into actionable control logic. Utilizing industry-standard computational tools to build rigorous testing frameworks. I also integrate technical video editing workflows to cleanly communicate and present complex engineering findings to stakeholders.</p>
-                
-                <div class="tags">
-                    <span class="tag">MATLAB / Simulink</span>
-                    <span class="tag">Python & Pandas</span>
-                    <span class="tag">BMS Algorithm Development</span>
-                    <span class="tag">Vehicle Dynamics</span>
-                    <span class="tag">VS Code</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">DaVinci Resolve</span>
-                </div>
-            </div>
-
+        <div class="cta-links">
+            <!-- Example links inspired by EV Pulse and Dr. Sunil Kumar[cite: 2, 3] -->
+            <a href="#" class="btn primary">Let's Talk</a>
+            <a href="#" class="btn secondary">LinkedIn &rarr;</a>
+            <a href="#" class="btn secondary">GitHub &rarr;</a>
         </div>
-    </div>
+    </header>
+
+    <!-- SKILLS RIBBON (Inspired by EV Pulse[cite: 2]) -->
+    <section class="skills-ribbon">
+        <div class="skills-container">
+            <span class="skill-tag">⚡ MATLAB / Simulink</span> <!--[cite: 1] -->
+            <span class="skill-tag">⚡ Python & Pandas</span> <!--[cite: 1] -->
+            <span class="skill-tag">⚡ BMS Algorithm Development</span> <!--[cite: 1] -->
+            <span class="skill-tag">⚡ Vehicle Dynamics</span> <!--[cite: 1] -->
+            <span class="skill-tag">⚡ VS Code & Git</span> <!--[cite: 1] -->
+            <span class="skill-tag">⚡ DaVinci Resolve</span> <!--[cite: 1] -->
+        </div>
+    </section>
+
+    <!-- THE VISION SECTION -->
+    <section class="container vision-section">
+        <h3>✦ The Vision</h3> <!--[cite: 1] -->
+        <p>Driving the transition to sustainable e-mobility by cutting through theoretical hype with hard, data-driven engineering. My focus is on optimizing the electric mobility ecosystem—from battery management logic to vehicle dynamics—ensuring next-generation powertrains perform flawlessly outside of the simulation environment.</p> <!--[cite: 1] -->
+    </section>
+
+    <!-- ONGOING PROJECTS (Card Grid inspired by EV Pulse[cite: 2]) -->
+    <section class="container">
+        <h3>✦ Ongoing Projects & Technical Expertise</h3> <!--[cite: 1] -->
+        <div class="grid-cards">
+            <div class="card">
+                <h4>🔋 Battery Predictive Algorithms</h4>
+                <p>Currently architecting <strong>State of Health (SOH)</strong> and <strong>Remaining Useful Life (RUL)</strong> algorithms for advanced battery packs.</p> <!--[cite: 1] -->
+                <p>Managing the technical timeline to transition these predictive algorithms into robust cloud implementations.</p> <!--[cite: 1] -->
+            </div>
+            
+            <div class="card">
+                <h4>⚙️ Powertrain & Motor Control</h4>
+                <p>Continuously refining motor controller behaviors under varying load profiles.</p> <!--[cite: 1] -->
+                <p>Translating complex dynamic behaviors into actionable control logic utilizing industry-standard computational tools to build rigorous testing frameworks.</p> <!--[cite: 1] -->
+            </div>
+
+            <div class="card">
+                <h4>📊 Visual Engineering</h4>
+                <p>Integrating technical video editing workflows (via DaVinci Resolve) to cleanly communicate and present complex engineering findings to stakeholders.</p> <!--[cite: 1] -->
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION (Structured like Dr. Sunil Kumar[cite: 3]) -->
+    <section class="container education-section">
+        <h3>✦ Education</h3> <!--[cite: 1] -->
+        <div class="edu-block">
+            <h4>Executive M.Tech in Hybrid & Electric Vehicle Technology</h4> <!--[cite: 1] -->
+            <h5 class="institution">Indian Institute of Technology Indore (IIT Indore)</h5> <!--[cite: 1] -->
+            <p>Building a robust academic and practical foundation in advanced automotive technologies and electrified powertrain architectures.</p> <!--[cite: 1] -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sumit Singh Sisodia. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
