@@ -23,10 +23,16 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1000px;
+        .main-wrapper {
+            display: flex;
+            max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
+            gap: 2rem;
+        }
+
+        .container {
+            flex: 1;
         }
 
         /* --- Header Section --- */
@@ -154,7 +160,135 @@
             font-weight: 600;
         }
 
+        /* --- Left Sidebar / Contact Ribbon --- */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .contact-ribbon {
+            background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+            position: sticky;
+            top: 2rem;
+        }
+
+        .contact-ribbon h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            word-break: break-all;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: white;
+            transform: scale(1.1);
+        }
+
         /* --- Responsive Design --- */
+        @media (max-width: 1024px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .contact-ribbon {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .contact-ribbon h3 {
+                grid-column: 1 / -1;
+            }
+        }
+
         @media (max-width: 768px) {
             .story-grid {
                 grid-template-columns: 1fr;
@@ -168,68 +302,127 @@
                 text-align: center;
                 justify-content: center;
             }
+            .main-wrapper {
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="main-wrapper">
         
-        <!-- Header -->
-        <header>
-            <div class="header-text">
-                <span class="greeting">Hi, I'm</span>
-                <h1>SUMIT SINGH SISODIA</h1>
-                <div class="subtitle">Engineer • Powertrain Dynamics • Simulation Specialist</div>
-            </div>
+        <!-- Main Content -->
+        <div class="container">
             
-            <div class="profile-container">
-                <!-- Replace the link below with your actual LinkedIn profile picture URL -->
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQE5YMpZBzm7vw/profile-displayphoto-scale_200_200/B4DZ0An.zSKgAY-/0/1773831985556?e=1790208000&v=beta&t=KE92gyrDwMqH8RFFBXiTR6DpPZu7MlpfCdLfqMzqiRg" alt="Sumit Singh Sisodia">
-            </div>
-        </header>
-
-        <!-- Main Narrative Grid -->
-        <div class="story-grid">
-            
-            <!-- Card 1: Vision (Spans full width) -->
-            <div class="card vision-card">
-                <h2>✦ The Vision</h2>
-                <p>Driving the transition to sustainable e-mobility by cutting through theoretical hype with hard, data-driven engineering. My focus is on optimizing the electric mobility ecosystem—from battery management logic to vehicle dynamics—ensuring next-generation powertrains perform flawlessly outside of the simulation environment.</p>
-            </div>
-
-            <!-- Card 2: Education -->
-            <div class="card">
-                <h2>✦ Education</h2>
-                <span class="edu-highlight">Executive M.Tech in Hybrid & Electric Vehicle Technology</span>
-                <p><strong>Indian Institute of Technology Indore (IIT Indore)</strong></p>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Building a robust academic and practical foundation in advanced automotive technologies and electrified powertrain architectures.</p>
-            </div>
-
-            <!-- Card 3: Ongoing Projects -->
-            <div class="card">
-                <h2>✦ Ongoing Projects</h2>
-                <p>Currently architecting <strong>State of Health (SOH)</strong> and <strong>Remaining Useful Life (RUL)</strong> algorithms for advanced battery packs.</p>
-                <p style="margin-top: 1rem; font-size: 0.95rem;">Managing the technical timeline to transition these predictive algorithms into robust cloud implementations, while continuously refining motor controller behaviors under varying load profiles.</p>
-            </div>
-
-            <!-- Card 4: Work & Expertise (Spans full width at bottom) -->
-            <div class="card vision-card">
-                <h2>✦ Work & Technical Expertise</h2>
-                <p>Translating complex dynamic behaviors into actionable control logic. Utilizing industry-standard computational tools to build rigorous testing frameworks. I also integrate technical video editing workflows to cleanly communicate and present complex engineering findings to stakeholders.</p>
+            <!-- Header -->
+            <header>
+                <div class="header-text">
+                    <span class="greeting">Hi, I'm</span>
+                    <h1>SUMIT SINGH SISODIA</h1>
+                    <div class="subtitle">Engineer • Powertrain Dynamics • Simulation Specialist</div>
+                </div>
                 
-                <div class="tags">
-                    <span class="tag">MATLAB / Simulink</span>
-                    <span class="tag">Python & Pandas</span>
-                    <span class="tag">BMS Algorithm Development</span>
-                    <span class="tag">Vehicle Dynamics</span>
-                    <span class="tag">VS Code</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">DaVinci Resolve</span>
+                <div class="profile-container">
+                    <!-- Replace the link below with your actual LinkedIn profile picture URL -->
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQE5YMpZBzm7vw/profile-displayphoto-scale_200_200/B4DZ0An.zSKgAY-/0/1773831985556?e=1790208000&v=beta&t=KE92gyrDwMqH8RFFBXiTR6DpPZu7MqNPHfQcGvv5cRY" alt="Sumit Singh Sisodia">
+                </div>
+            </header>
+
+            <!-- Main Narrative Grid -->
+            <div class="story-grid">
+                
+                <!-- Card 1: Vision (Spans full width) -->
+                <div class="card vision-card">
+                    <h2>✦ The Vision</h2>
+                    <p>Driving the transition to sustainable e-mobility by cutting through theoretical hype with hard, data-driven engineering. My focus is on optimizing the electric mobility ecosystem—from battery management algorithms to real-world vehicle performance validation. I'm committed to bridging the gap between academic research and industry-grade solutions.</p>
+                </div>
+
+                <!-- Card 2: Education -->
+                <div class="card">
+                    <h2>✦ Education</h2>
+                    <span class="edu-highlight">Executive M.Tech in Hybrid & Electric Vehicle Technology</span>
+                    <p><strong>Indian Institute of Technology Indore (IIT Indore)</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Building a robust academic and practical foundation in advanced automotive technologies and electrified powertrain architectures.</p>
+                </div>
+
+                <!-- Card 3: Ongoing Projects -->
+                <div class="card">
+                    <h2>✦ Ongoing Projects</h2>
+                    <p>Currently architecting <strong>State of Health (SOH)</strong> and <strong>Remaining Useful Life (RUL)</strong> algorithms for advanced battery packs.</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Managing the technical timeline to transition these predictive algorithms into robust cloud implementations, while continuously refining performance metrics.</p>
+                </div>
+
+                <!-- Card 4: Work & Expertise (Spans full width at bottom) -->
+                <div class="card vision-card">
+                    <h2>✦ Work & Technical Expertise</h2>
+                    <p>Translating complex dynamic behaviors into actionable control logic. Utilizing industry-standard computational tools to build rigorous testing frameworks. I also integrate technical storytelling into my work, ensuring that complex engineering solutions are communicated clearly to both technical and non-technical stakeholders.</p>
+                    
+                    <div class="tags">
+                        <span class="tag">MATLAB / Simulink</span>
+                        <span class="tag">Python & Pandas</span>
+                        <span class="tag">BMS Algorithm Development</span>
+                        <span class="tag">Vehicle Dynamics</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">DaVinci Resolve</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Left Sidebar - Contact Ribbon -->
+        <div class="sidebar">
+            <div class="contact-ribbon">
+                <h3>Connect With Me</h3>
+
+                <!-- Phone -->
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-info">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/sumit-singh-sisodia/" target="_blank">linkedin.com/in/sumit-singh-sisodia</a>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="contact-item">
+                    <div class="contact-icon">💻</div>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/sssisodia11" target="_blank">github.com/sssisodia11</a>
+                    </div>
+                </div>
+
+                <!-- Twitter -->
+                <div class="contact-item">
+                    <div class="contact-icon">🐦</div>
+                    <div class="contact-info">
+                        <span class="contact-label">Twitter</span>
+                        <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
+                    </div>
+                </div>
+
+                <!-- Social Links Section -->
+                <div class="social-links">
+                    <a class="social-link" href="https://www.linkedin.com/in/sumit-singh-sisodia/" target="_blank" title="LinkedIn">💼</a>
+                    <a class="social-link" href="https://github.com/sssisodia11" target="_blank" title="GitHub">💻</a>
+                    <a class="social-link" href="https://twitter.com/yourhandle" target="_blank" title="Twitter">𝕏</a>
                 </div>
             </div>
-
         </div>
+
     </div>
 
 </body>
