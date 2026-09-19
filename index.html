@@ -26,6 +26,36 @@ h1{font-size:clamp(28px,4.4vw,56px);font-size:clamp(20px,8.1cqi,56px);white-spac
 .project-art svg{width:142px;height:92px;overflow:visible}
 @media(max-width:850px){.hero{grid-template-columns:minmax(0,1fr) 190px;gap:28px}.portrait-card{width:190px}.hero .intro{font-size:14px}.hero .tagline{font-size:20px}}
 @media(max-width:640px){.hero{grid-template-columns:minmax(0,1fr);gap:28px;padding:40px 0}.portrait-card{width:190px;justify-self:start}.hero h1{letter-spacing:-1px}.project-art{height:108px}}
+
+/* Contact placeholders: edit the CONTACT DETAILS block beneath the portrait. */
+.contact-panel{font-style:normal;border-top:1px solid var(--line);margin:14px 3px 0;padding:16px 5px 4px;text-align:left}
+.contact-heading{margin:0 0 12px;font-size:10px;font-weight:650;letter-spacing:1.7px;text-transform:uppercase;color:var(--accent)}
+.contact-row{display:flex;align-items:center;gap:10px;padding:9px 0;text-decoration:none;font-size:11px;line-height:1.5;border-radius:3px}
+.contact-row svg{width:17px;height:17px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;color:var(--accent)}
+.contact-row>span{min-width:0;overflow-wrap:anywhere}
+.contact-row small{display:block;color:var(--muted);font-size:9px;letter-spacing:.6px;margin-bottom:2px}
+.contact-row:hover{background:var(--soft)}
+.contact-row:hover>span>span{text-decoration:underline;text-underline-offset:3px}
+.contact-example{font-size:9px;color:var(--muted);margin:12px 0 0;line-height:1.5}
+.hero{align-items:start}
+@media(max-width:850px) and (min-width:641px){.contact-row{gap:8px;font-size:10px}.contact-panel{padding-left:0;padding-right:0}}
+@media(max-width:640px){.portrait-card{width:240px;max-width:100%}.portrait{width:170px;margin:0 auto}.contact-row{font-size:11px}}
+
+/* Portrait and contact sidebar: confined to the introductory section. */
+.hero{grid-template-columns:minmax(0,1fr) 442px;gap:32px;align-items:center}
+.hero>.profile-side{container-type:normal;display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px;align-items:start;min-width:0}
+.profile-side .portrait-card{width:230px;max-width:100%;justify-self:start;padding:8px;margin:0}
+.profile-side .portrait{width:100%;margin:0;aspect-ratio:4/4.6}
+.profile-side .portrait-card figcaption{font-size:10px;padding:10px 0 2px}
+.profile-side .contact-panel{border-top:0;border-left:1px solid var(--line);margin:8px 0 0;padding:1px 0 0 16px;min-width:0;background:transparent}
+.profile-side .contact-heading{margin:0 0 9px;font-size:9px;letter-spacing:1.5px}
+.profile-side .contact-row{gap:9px;padding:7px 0;font-size:10px;line-height:1.45;min-height:43px}
+.profile-side .contact-row svg{width:18px;height:18px}
+.profile-side .contact-row small{font-size:9px;margin-bottom:2px}
+.profile-side .contact-example{font-size:8px;margin:8px 0 0}
+@media(min-width:851px) and (max-width:1050px){.hero{grid-template-columns:minmax(0,1fr) 364px;gap:24px}.hero>.profile-side{grid-template-columns:160px minmax(0,1fr);gap:14px}.profile-side .portrait-card{width:160px}.profile-side .contact-panel{padding-left:12px}.profile-side .contact-row{min-height:39px;padding:5px 0}}
+@media(max-width:850px){.hero{grid-template-columns:minmax(0,1fr);gap:30px}.hero>.profile-side{width:min(100%,420px);grid-template-columns:190px minmax(0,1fr);gap:20px}.hero h1{font-size:clamp(20px,8.1cqi,56px)}}
+@media(max-width:480px){.hero>.profile-side{grid-template-columns:140px minmax(0,1fr);gap:12px}.profile-side .portrait-card{width:140px;padding:6px}.profile-side .contact-panel{padding-left:10px;margin-top:3px}.profile-side .contact-row{gap:7px;min-height:35px;padding:4px 0;font-size:9px}.profile-side .contact-row svg{width:15px;height:15px}.profile-side .contact-row small{font-size:8px}.profile-side .contact-heading{font-size:8px;margin-bottom:6px}.profile-side .contact-example{display:none}.profile-side .portrait-card figcaption{font-size:9px}}
 </style>
 </head>
 <body>
@@ -34,7 +64,16 @@ h1{font-size:clamp(28px,4.4vw,56px);font-size:clamp(20px,8.1cqi,56px);white-spac
 <main id="main" class="wrap">
 <div class="hero">
 <div><p class="eyebrow">Design Engineer &nbsp; / &nbsp; EV Technology</p><h1>Sumit Singh Sisodia</h1><p class="tagline">Exploring electric mobility.<br>Through design &amp; modelling.</p><p class="intro">A design engineer working on electric vehicles, pursuing an Executive M.Tech in Hybrid &amp; Electric Vehicle Technology at IIT Indore.</p><p class="intro">My work connects hardware design, battery modelling and simulation, with an interest in understanding how electric systems behave in practice.</p><div class="actions"><a class="button primary" href="#projects">Explore my projects ↗</a><a class="button" href="#experience">Engineering background</a></div></div>
-<figure class="portrait-card"><div class="portrait"><img src="professional_photo.png" alt="Sumit Singh Sisodia" width="550" height="640"></div><figcaption><strong>Design. Model. Refine.</strong><span>Electric mobility</span></figcaption></figure>
+<div class="profile-side"><figure class="portrait-card"><div class="portrait"><img src="professional_photo.png" alt="Sumit Singh Sisodia" width="550" height="640"></div><figcaption><strong>Design. Model. Refine.</strong><span>Electric mobility</span></figcaption></figure>
+<!-- CONTACT DETAILS: Replace the displayed values AND the href values below with your own details. -->
+<address class="contact-panel" aria-label="Contact details">
+<p class="contact-heading">Get in touch</p>
+<a class="contact-row" href="tel:+91 9058385001"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a15 15 0 0 1-7-7l2-2-2-5Z"/></svg><span><small>Phone</small><span>+91 90583 85001</span></span></a>
+<a class="contact-row" href="mailto:sss11aug@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span><small>Gmail / Email</small><span>sss11aug@gmail.com</span></span></a>
+<a class="contact-row" href="https://www.linkedin.com/in/sumit-singh-sisodia" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7m4 0v-7m0 3a3 3 0 0 1 6 0v4"/><circle cx="7" cy="7" r=".8" fill="currentColor" stroke="none"/></svg><span><small>LinkedIn</small><span>sumit-singh-sisodia</span></span></a>
+<a class="contact-row" href="https://github.com/sssisodia11" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.7c3-.3 6-1.5 6-6A4.7 4.7 0 0 0 19 6c.2-1 .2-2-.3-3-1 0-3 1-3.7 1.5a12 12 0 0 0-6 0C8.3 4 6.3 3 5.3 3c-.5 1-.5 2-.3 3a4.7 4.7 0 0 0-1 3.3c0 4.5 3 5.7 6 6A3.5 3.5 0 0 0 9 18v4"/></svg><span><small>GitHub</small><span>@sssisodia11</span></span></a>
+
+</address></div>
 </div>
 <div class="strip" aria-label="Areas of work"><span><b>01</b> Battery modelling</span><span><b>02</b> Design &amp; development</span><span><b>03</b> Simulation &amp; control</span></div>
 <section id="projects"><div class="section-head"><div><p class="eyebrow">Research &amp; development</p><h2>Engineering projects</h2></div><p>Ongoing work in battery behaviour, health estimation and autonomous systems.</p></div><div class="projects">
@@ -48,6 +87,8 @@ h1{font-size:clamp(28px,4.4vw,56px);font-size:clamp(20px,8.1cqi,56px);white-spac
 </main><footer class="wrap"><span>Sumit Singh Sisodia</span><span>Design engineering &amp; electric mobility</span></footer>
 </body>
 </html>
+
+
 
 
 
